@@ -37,7 +37,7 @@ func main() {
 		h := c.DefaultQuery("h", "45")
 
 		randPic := files[rand.IntN(len(files))]
-		out, err := exec.Command("chafa", "--size", w+"x"+h, "--symbols=block" randPic).Output()
+		out, err := exec.Command("chafa", "--size", w+"x"+h, "--symbols=block", randPic).Output()
 		if err != nil {
 			log.Printf("chafa failed: %v", err)
 			c.String(500, "failed to render a cat")
