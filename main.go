@@ -12,7 +12,7 @@ import (
 func main() {
 	// check if chafa is installed on a host machine
 	if _, err := exec.LookPath("chafa"); err != nil {
-		log.Fatalf("chafa not found: %v", err)
+		log.Fatalf("error: chafa not found")
 	}
 	
 	r := gin.Default()
